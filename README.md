@@ -20,8 +20,10 @@ cd /home/
 cmake .
 make
 ```
+выходим из докера
 
 ## запуск программы
 ```
+docker run -it --rm -v DIR\dicom2gif:/home debian_mc /home/dicom2gif -d /home/john -o /home/out.gif
 ```
-
+john - директория в которой лежат DCM-файлы
