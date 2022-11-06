@@ -16,7 +16,6 @@ docker build -t debian_mc ./docker/
 ## компилирование программы
 ```
 docker run -it --rm -v DIR\dicom2gif:/home debian_mc
-cd /home/
 cmake .
 make
 ```
@@ -24,6 +23,7 @@ make
 
 ## запуск программы
 ```
-docker run -it --rm -v DIR\dicom2gif:/home debian_mc /home/dicom2gif -d /home/john -o /home/out.gif
+docker run -it --rm -v DIR\dicom2gif:/home debian_mc /home/dicom2gif -d john -o 1.gif
 ```
 john - директория в которой лежат DCM-файлы
+1.gif - выходной файл

@@ -53,7 +53,7 @@ Dicom2Gif::~Dicom2Gif(){
 void Dicom2Gif::get_files( std::string dir, std::list<std::string> &files ) {
   DIR *dirp = opendir(dir.c_str());
   if(!dirp) {
-    cout << "о�ибка о�к���и� ди�ек�о�ии" << endl;
+    cout << "error directory opening" << endl;
     exit(1);
   }
 
@@ -69,7 +69,7 @@ void Dicom2Gif::get_files( std::string dir, std::list<std::string> &files ) {
     string path = dir + "\\" + file_name;
 
     if (stat(path.c_str(), &stbuf) < 0) {
-      cout << "о�ибка пол��ени� �ведени� о �айле" << endl;
+      cout << "error retriving file stat" << endl;
     }
 
     if( S_ISDIR(stbuf.st_mode) ) {

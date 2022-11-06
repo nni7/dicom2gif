@@ -137,7 +137,7 @@ bool AnimatedGifSaver::Save(const char* filename){
        
        
     for (int y = 0, j=(gifsy-1)*gifsx; y < gifsy; y++, j-=gifsx) {
-  	  if (EGifPutLine(GifFile, &(frames[ni][j]), gifsx) == GIF_ERROR) return false;
+        if (EGifPutLine(GifFile, &(frames[ni][j]), gifsx) == GIF_ERROR) return false;
     }
   }
 
