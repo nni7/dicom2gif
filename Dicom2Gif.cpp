@@ -66,7 +66,7 @@ void Dicom2Gif::get_files( std::string dir, std::list<std::string> &files ) {
     }
 
     struct stat stbuf;
-    string path = dir + "\\" + file_name;
+    string path = dir + "/" + file_name;
 
     if (stat(path.c_str(), &stbuf) < 0) {
       cout << "error retriving file stat" << endl;
